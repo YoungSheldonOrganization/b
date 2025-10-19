@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>nvid.dev</title>
+  <meta name="description" content="haha" />
+  <meta name="theme-color" content="#76b900" />
+
+  <style>
+    :root {
+      --green: #76b900;
+      --dark: #0a0a0a;
+      --darker: #050505;
+      --card: #111;
+      --radius: 10px;
+      --max: 1100px;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color-scheme: dark;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--dark);
+      color: #eee;
+      line-height: 1.5;
+    }
+
+    header {
+      background: var(--darker);
+      border-bottom: 1px solid #222;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      overflow: visible;
+    }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 16px; }
+    .flex { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      background: transparent;
+      overflow: visible;
+      text-shadow:
+        0 0 5px rgba(118,185,0,0.6),
+        0 0 10px rgba(118,185,0,0.3);
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--green); }
+
+    .hero {
+      position: relative;
+      overflow: visible;
+      background: linear-gradient(to bottom, #0b0b0b 0%, #000 100%);
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--green);
+      text-shadow:
+        0 0 6px rgba(118,185,0,0.7),
+        0 0 12px rgba(118,185,0,0.3);
+    }
+
+    .hero h1 span.dev {
+      color: #fff;
+      text-shadow:
+        0 0 6px rgba(255,255,255,0.7),
+        0 0 14px rgba(255,255,255,0.4);
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 20px auto;
+      color: #bbb;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 22px;
+      border-radius: var(--radius);
+      background: var(--green);
+      color: #000;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(118,185,0,0.5);
+      transition: background 0.2s, transform 0.1s, box-shadow 0.3s;
+    }
+    .btn:hover {
+      background: #8dd800;
+      transform: translateY(-2px);
+      box-shadow: 0 0 18px rgba(118,185,0,0.8);
+    }
+
+    section { padding: 80px 20px; }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .feature {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 22px;
+      text-align: center;
+      border: 1px solid #1a1a1a;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+    .feature:hover { transform: translateY(-40px); }
+    .feature h3 {
+      color: var(--green);
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      text-shadow:
+        0 0 6px rgba(118,185,0,0.5),
+        0 0 12px rgba(118,185,0,0.2);
+    }
+    .feature p { color: #aaa; font-size: 0.95rem; }
+
+    .about {
+      background: #0e0e0e;
+      border-top: 1px solid #111;
+      border-bottom: 1px solid #111;
+      text-align: center;
+    }
+
+    footer {
+      background: #000;
+      padding: 20px;
+      color: #777;
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 1px solid #111;
+    }
+
+    a.project-link {
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a.project-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap flex">
+      <div class="logo">nvid.dev</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="mailto:sheldon@nvid.dev">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>nvid<span class="dev">.dev</span></h1>
+    <p>We make things that serve no real purpose, mostly for novelty. Every once in a while, something useful might appear by accident.</p>
+    <a href="mailto:sheldon@nvid.dev" class="btn">Contact Us</a>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2 style="text-align:center; color:var(--green)">Current Experiments</h2>
+      <div class="features">
+        <div class="feature">
+          <h3><a href="https://bigfish.nekoweb.org" class="project-link">Big Fish</a></h3>
+          <p>A website about big fish. Don't think too hard about it.</p>
+        </div>
+        <div class="feature">
+          <h3><a href="https://youngsheldon.org" class="project-link">youngsheldon.org</a></h3>
+          <p>A monument and memorial to sheldon. You probably won't understand it, and that's the point.</p>
+        </div>
+        <div class="feature">
+          <h3>???</h3>
+          <p>Future project pending. We're probably working on something new, for a reason even we can't explain.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap">
+      <h2 style="color:var(--green)">About nvid.dev</h2>
+      <p style="max-width:700px;margin:20px auto;color:#bbb;">
+        Founded on the principle that not everything needs a reason to exist, nvid.dev builds digital experiments that probably shouldn't exist, but do anyway.
+        We aim to make the internet a slightly weirder, slightly more colorful place.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2 style="text-align:center; color:var(--green)">Contact</h2>
+      <p style="text-align:center; color:#bbb; margin-bottom:20px;">
+        Have an idea that makes no sense? Let's talk.
+      </p>
+      <p style="text-align:center;">
+        <a href="mailto:sheldon@nvid.dev" class="btn">Email Us</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 nvid.dev — making useless things since forever.
+  </footer>
+
+</body>
+</html>
